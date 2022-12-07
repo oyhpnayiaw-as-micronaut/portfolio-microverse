@@ -11,11 +11,18 @@
 </head>
 
 <body>
-  <header class="toolbar">
-    <a href="/" class="logo">My Logo</a>
-    <button class="menu" type="button">
-      <img src="assets/icons/menu.svg" alt="menu icon" />
-    </button>
+  <header class="header">
+      <div class="toolbar container">
+      <a href="/" class="logo">My Logo</a>
+      <button class="menu" type="button">
+        <img src="assets/icons/menu.svg" alt="menu icon" />
+      </button>
+      <nav class="nav">
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      </div>
   </header>
 
   <main>
@@ -59,7 +66,7 @@
       </div>
     </section>
 
-    <section class="works-section container">
+    <section id="portfolio" class="works-section container">
       <article class="card">
         <div class="card-image">
           <img src="assets/images/portfolio-1.svg" alt="Portfolio" />
@@ -165,7 +172,7 @@
       </article>
     </section>
 
-    <section class="about-me-section">
+    <section id="about" class="about-me-section">
       <div class="about-me-wrapper container">
         <div class="about-me-container">
           <h2 class="about-me-title">About <br />Myself</h2>
@@ -256,7 +263,7 @@
       </div>
     </section>
 
-    <section class="contact-section">
+    <section id="contact" class="contact-section">
       <div class="contact-section-bg">
         <div class="contact-container">
           <h4>Contact me</h4>
