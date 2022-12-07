@@ -501,7 +501,7 @@ main {
   align-items: center;
   margin: auto;
   gap: 18px;
-  max-width: 447px;
+  width: 100%;
 }
 
 .contact-section form input,
