@@ -152,7 +152,6 @@ main {
   transition: 350ms;
 }
 
-
 .nav-link:hover::before {
   left: 0;
 }
@@ -188,17 +187,37 @@ main {
   line-height: 55px;
   font-weight: 700;
   color: #172b4d;
+  animation: dropIn 1.2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .about-me {
   font-size: 16px;
   color: #344563;
   margin: 12px 0;
+  animation: dropIn 1.2s 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .social-icon-header {
   color: #7f8cff;
   margin-bottom: 12px;
+  opacity: 0;
+  animation: dropIn 1.2s 0.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .social-icon-container {
@@ -207,6 +226,14 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 200px;
+}
+
+.social-icon-container li {
+  transition: 350ms;
+}
+
+.social-icon-container li:hover {
+  transform: scale(1.2);
 }
 
 /* Work Section */
