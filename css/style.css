@@ -216,6 +216,7 @@ main {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -232,10 +233,6 @@ main {
 
 .social-icon-container li {
   transition: 350ms;
-}
-
-.social-icon-container li:hover {
-  transform: scale(1.2);
 }
 
 /* Work Section */
@@ -472,10 +469,41 @@ main {
   display: flex;
   border-radius: 8px;
   transition: 0.5s;
+  position: relative;
+}
+
+.skill-dropdown-content li::before {
+  content: " ";
+  display: block;
+  height: calc(100% + 2px);
+  width: calc(100% + 2px);
+  border: transparent dashed 1px;
+  position: absolute;
+  border-radius: 100%;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.social-icon-container li:hover {
+  transform: scale(1.2);
 }
 
 .skill-dropdown-content li:hover {
-  transform: rotateY(360deg);
+  border-radius: 100%;
+}
+
+.skill-dropdown-content li:hover::before {
+  transition: border-color 1s;
+  border-color: #253858;
 }
 
 .skill-dropdown-content span {
