@@ -49,6 +49,7 @@ main {
   color: #396df2;
   border: 1px solid #6070ff;
   cursor: pointer;
+  transition: 350ms;
 }
 
 .primary-button:hover {
@@ -68,6 +69,7 @@ main {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 999;
 }
 
 .toolbar {
@@ -260,6 +262,11 @@ main {
   .card {
     flex-direction: row;
     gap: 32px;
+    transition: 300ms;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
   }
 
   .card:nth-child(2n) {
@@ -464,6 +471,11 @@ main {
   padding: 8px 16px;
   display: flex;
   border-radius: 8px;
+  transition: 0.5s;
+}
+
+.skill-dropdown-content li:hover {
+  transform: rotateY(360deg);
 }
 
 .skill-dropdown-content span {
