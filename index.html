@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Portfolio page</title>
+  <title>Portfolio Page</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -273,10 +273,25 @@
             to help with it
           </p>
           <form action="https://formspree.io/f/xlevqbyb" method="POST">
-            <input type="text" name="name" id="name" placeholder="Name" maxlength="30" required />
-            <input type="email" name="email" id="email" placeholder="Email" required />
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here"
-              maxlength="500" required></textarea>
+            <ul>
+              <li>
+                <label for="name"></label>
+                <input type="text" name="name" id="name" placeholder="Name" maxlength="30" required />
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Email" required />
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <label for="message"></label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here"
+                  maxlength="500" required></textarea>
+              </li>
+            </ul>
             <button class="primary-button" type="submit">Get in Touch</button>
           </form>
         </div>
