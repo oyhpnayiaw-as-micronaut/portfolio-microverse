@@ -91,11 +91,11 @@ main {
   font-size: 18px;
   font-weight: bold;
   display: block;
-  transition: 0.9s;
+  transition: 0.3s;
 }
 
 .logo:hover {
-  transform: rotateY(360deg);
+  transform: skew(-12deg);
 }
 
 .menu {
@@ -499,15 +499,6 @@ main {
   transform: scale(1.2);
 }
 
-.skill-dropdown-content li:hover {
-  border-radius: 100%;
-}
-
-.skill-dropdown-content li:hover::before {
-  transition: border-color 1s;
-  border-color: #253858;
-}
-
 .skill-dropdown-content span {
   display: inline-block;
   margin: auto 17px;
@@ -528,6 +519,15 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .skill-dropdown-content li:hover {
+    border-radius: 100%;
+  }
+
+  .skill-dropdown-content li:hover::before {
+    transition: border-color 1s;
+    border-color: #253858;
   }
 
   .skill-dropdown-content li img {
