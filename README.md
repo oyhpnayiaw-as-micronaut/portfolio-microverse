@@ -14,21 +14,29 @@
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
+  - [🚀 Live Demo](#live-demo)
 - [👥 Authors](#authors)
-
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Portfolio Project <a name="about-project"></a>
 
-> Portfolio built-with html and css 
-
-<br> This project is exercise for module 1 week 1 of microverse program.
+> Portfolio built-with html and css
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 > This project is built-with **html** and **css**.
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Github Pages](https://oyhpnayiaw-as-micronut.github.io/portfolio-microverse/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -39,7 +47,6 @@
 ### Prerequisites
 
 In order to run the tests you need node.js installed.
-
 
 ### Install
 
@@ -53,10 +60,9 @@ npm i
 
 Open `index.html`.
 
-### Run tests
+### Run linters
 
-To run tests, run the following command:
-
+To run linters, run the following command:
 
 ```sh
 npm run stylelint
@@ -66,8 +72,6 @@ npm run hint
 <!-- AUTHORS -->
 
 ## 👥 Author <a name="authors"></a>
-
-> Mention all of the collaborators of this project.
 
 👤 **Wai Yan Phyo**
 
