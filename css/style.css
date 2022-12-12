@@ -599,6 +599,10 @@ main {
   width: 100%;
 }
 
+.contact-section form ul {
+  width: 100%;
+}
+
 .contact-section form input,
 .contact-section form textarea {
   width: 100%;
