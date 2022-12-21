@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 body {
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
@@ -41,6 +45,12 @@ body.prevent-scroll {
 
 main {
   height: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .container {
@@ -66,6 +76,13 @@ main {
 .primary-button:active {
   background-color: #2230d2;
   color: #fff;
+}
+
+.close-icon {
+  mask: url(../assets/icons/close.svg) no-repeat center;
+  width: 16px;
+  height: 16px;
+  background: #fff;
 }
 
 /* Toolbar section */
@@ -134,7 +151,7 @@ nav {
   align-items: center;
 }
 
-.close {
+.menu-close {
   position: absolute;
   top: 16px;
   right: 24px;
@@ -144,7 +161,7 @@ nav {
 }
 
 @media (min-width: 768px) {
-  .close {
+  .menu-close {
     display: none;
   }
 }
@@ -336,8 +353,8 @@ nav {
     transition: 300ms;
   }
 
-  .card:hover {
-    transform: scale(1.1);
+  .works-section .card:hover {
+    transform: scale(1.05);
   }
 
   .card:nth-child(2n) {

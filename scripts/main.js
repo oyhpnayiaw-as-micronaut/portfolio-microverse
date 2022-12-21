@@ -1,3 +1,5 @@
+import { generatePopupTemplate, projects } from './popup.js';
+
 const body = document.querySelector('body');
 const header = document.querySelector('header');
 
@@ -5,39 +7,65 @@ function addHeaderShadow() {
   header.classList.toggle('header-shadow', window.scrollY > 0);
 }
 
-window.addEventListener('scroll', addHeaderShadow);
+const disableScroll = () => body.classList.add('prevent-scroll');
+const enableScroll = () => body.classList.remove('prevent-scroll');
 
-const navEl = document.querySelector('nav');
+window.addEventListener('scroll', addHeaderShadow);
+window.addEventListener('resize', enableScroll);
+
+// Handle Menu
+const navEl = document.querySelector('.nav-list');
 const navLinks = document.querySelectorAll('.nav-link');
 
 const menuBtn = document.querySelector('.menu');
-const closeBtn = document.querySelector('.close');
+const menuCloseBtn = document.querySelector('.menu-close');
 
 function openMenu() {
-  navEl.style.display = 'flex';
-  body.style.cssText = 'position: fixed; overflow: hidden;';
+  disableScroll();
+  navEl.classList.add('open');
 }
 
 function closeMenu() {
-  if (navEl.style.display === 'flex' && window.innerWidth < 768) {
-    navEl.style.display = 'none';
-    body.style.cssText = 'position: static; overflow: visible;';
-  }
+  enableScroll();
+  navEl.classList.remove('open');
 }
 
 menuBtn.addEventListener('click', openMenu);
-closeBtn.addEventListener('click', closeMenu);
+menuCloseBtn.addEventListener('click', closeMenu);
+navEl.addEventListener('click', closeMenu);
 
 navLinks.forEach((link) => {
   link.addEventListener('click', closeMenu);
 });
 
-window.addEventListener('resize', () => {
-  body.style.cssText = 'position: static; overflow: visible;';
+//
+//
+//
+// Handle Popup
+const popup = document.getElementById('popup');
 
-  if (window.innerWidth > 768) {
-    navEl.style.display = 'flex';
-  } else {
-    navEl.style.display = 'none';
-  }
+function openPopup(index) {
+  disableScroll();
+  popup.classList.add('show');
+  popup.innerHTML = generatePopupTemplate(projects[index]);
+
+  const popupBtns = document.querySelectorAll(
+    '.popup-close-button, .popup-button-container > a'
+  );
+
+  popupBtns.forEach((btn) => {
+    btn.addEventListener('click', closePopup);
+  });
+}
+
+function closePopup() {
+  enableScroll();
+  popup.classList.remove('show');
+  popup.innerHTML = '';
+}
+
+const seeProjectBtn = document.querySelectorAll('.card-button');
+
+seeProjectBtn.forEach((btn, index) => {
+  btn.addEventListener('click', () => openPopup(index));
 });

@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="css/style.css" />
-  <script src="scripts/main.js" defer></script>
+  <!-- <script src="scripts/popup.js" type="module" defer></script> -->
+  <script src="scripts/main.js" type="module" defer></script>
 </head>
 
 <body>
@@ -16,21 +17,25 @@
   <header>
     <div class="toolbar container">
       <a href="#" class="logo">My Logo</a>
-      <div>
+      <nav>
         <button class="menu" type="button">
           <img src="assets/icons/menu.svg" alt="menu icon" />
         </button>
-        <nav class="nav">
-          <button class="close" type="button">
-            <img src="assets/icons/close.svg" alt="close icon" />
-          </button>
-          <a href="#portfolio" class="nav-link">Portfolio</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#contact" class="nav-link">Contact</a>
-        </nav>
-      </div>
+        <ul class="nav-list">
+          <li>
+            <button class="menu-close" type="button">
+              <div class="close-icon" />
+            </button>
+          </li>
+          <li> <a href="#portfolio" class="nav-link">Portfolio</a> </li>
+          <li> <a href="#about" class="nav-link">About</a> </li>
+          <li> <a href="#contact" class="nav-link">Contact</a> </li>
+        </ul>
+      </nav>
     </div>
   </header>
+
+  <div id="popup"></div>
 
   <main>
     <section id="#" class="landing-section">
