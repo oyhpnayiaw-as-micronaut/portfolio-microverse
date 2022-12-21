@@ -1,10 +1,6 @@
 <a name="readme-top"></a>
 
 <div align="center">
-
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
   <h3><b>Portfolio Project with Microverse</b></h3>
 
 </div>
@@ -16,8 +12,11 @@
     - [Tech Stack](#tech-stack)
   - [🚀 Live Demo](#live-demo)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Portfolio Project <a name="about-project"></a>
@@ -34,7 +33,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Github Pages](https://oyhpnayiaw-as-micronut.github.io/portfolio-microverse/)
+- [Github Pages](https://oyhpnayiaw-as-micronaut.github.io/portfolio-microverse/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,6 +80,15 @@ npm run hint
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Popup Details**
+- [ ] **Client Side Validations**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -100,3 +108,15 @@ If you like this project stars the repo.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank everyone who help me to overcome the obstacles.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
