@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -29,7 +29,7 @@ a {
 
 body {
   min-height: 100vh;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #f7f7f9;
 }
 
@@ -63,13 +63,17 @@ main {
 }
 
 /* Toolbar section */
-.header {
-  background-color: white;
+header {
+  background-color: #fff;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 20;
+}
+
+.header-shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .toolbar {
@@ -119,35 +123,68 @@ main {
   border-color: #6070ff;
 }
 
-.nav {
+nav {
   display: none;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 48px 24px;
+  background: #0011ac99;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
   .nav {
     display: flex;
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    position: static;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 8;
+    padding: auto;
+    width: auto;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .close {
+    display: none;
   }
 }
 
 .nav-link {
-  color: #344563;
-  font-size: 15px;
-  margin: 0 12px;
-  transition: 0.7s;
+  color: #fff;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44px;
   position: relative;
   overflow: hidden;
 }
 
 .nav-link::before {
-  content: " ";
+  content: ' ';
   display: inline-block;
   width: 100%;
   height: 1px;
-  background-color: #000;
+  background-color: #fff;
   position: absolute;
   bottom: 0;
   left: -100%;
@@ -156,6 +193,23 @@ main {
 
 .nav-link:hover::before {
   left: 0;
+}
+
+@media (min-width: 768px) {
+  .nav-link {
+    display: flex;
+    font-size: 15px;
+    margin: 0 12px;
+    color: #344563;
+    gap: 8px;
+    position: relative;
+    line-height: 24px;
+    font-weight: normal;
+  }
+
+  .nav-link::before {
+    background-color: #000;
+  }
 }
 
 /* Landing Section */
@@ -331,7 +385,7 @@ main {
 }
 
 .card-info > *:not(:first-child)::before {
-  content: " ";
+  content: ' ';
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -475,7 +529,7 @@ main {
 }
 
 .skill-dropdown-content li::before {
-  content: " ";
+  content: ' ';
   display: block;
   height: calc(100% + 2px);
   width: calc(100% + 2px);
