@@ -28,9 +28,12 @@ function generatePopupTemplate(project) {
             <a href="${project.live}" class="primary-button card-button">
               See Live<span class="popup-a-icon export-icon"/>
             </a>
-            <a href="${project.source
-    }" class="primary-button card-button" target="_blank" rel="noopener noreferrer">
-              See Source<span class="popup-a-icon github-icon"/>
+            <a 
+              href="${project.source}" 
+              class="primary-button card-button" 
+              target="_blank" 
+              rel="noopener noreferrer">
+                See Source<span class="popup-a-icon github-icon"/>
             </a>
           </div>
         </div>
@@ -39,10 +42,11 @@ function generatePopupTemplate(project) {
 `;
 }
 
-const description =
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent";
-const source =
-  'https://github.com/oyhpnayiaw-as-micronaut/portfolio-microverse';
+// prettier-ignore
+const description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent";
+
+// prettier-ignore
+const source = 'https://github.com/oyhpnayiaw-as-micronaut/portfolio-microverse';
 
 const projects = [
   {
@@ -51,7 +55,7 @@ const projects = [
     description,
     technologies: ['html', 'css', 'javaScript'],
     live: '#',
-    source
+    source,
   },
   {
     title: 'Multi-Post Stories',
@@ -59,7 +63,7 @@ const projects = [
     description,
     technologies: ['html', 'css', 'javaScript', 'github', 'ruby', 'bootstraps'],
     live: '#',
-    source
+    source,
   },
   {
     title: 'Tonic',
@@ -67,7 +71,7 @@ const projects = [
     description,
     technologies: ['html', 'css', 'javaScript', 'github', 'ruby', 'bootstraps'],
     live: '#',
-    source
+    source,
   },
   {
     title: 'Multi-Post Stories',
@@ -75,8 +79,8 @@ const projects = [
     description,
     technologies: ['html', 'css', 'javaScript'],
     live: '#',
-    source
-  }
+    source,
+  },
 ];
 
 export { generatePopupTemplate, projects };

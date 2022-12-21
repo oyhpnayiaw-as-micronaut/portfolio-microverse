@@ -44,24 +44,24 @@ navLinks.forEach((link) => {
 // Handle Popup
 const popup = document.getElementById('popup');
 
+function closePopup() {
+  enableScroll();
+  popup.classList.remove('show');
+  popup.innerHTML = '';
+}
+
 function openPopup(index) {
   disableScroll();
   popup.classList.add('show');
   popup.innerHTML = generatePopupTemplate(projects[index]);
 
   const popupBtns = document.querySelectorAll(
-    '.popup-close-button, .popup-button-container > a'
+    '.popup-close-button, .popup-button-container > a',
   );
 
   popupBtns.forEach((btn) => {
     btn.addEventListener('click', closePopup);
   });
-}
-
-function closePopup() {
-  enableScroll();
-  popup.classList.remove('show');
-  popup.innerHTML = '';
 }
 
 const seeProjectBtn = document.querySelectorAll('.card-button');

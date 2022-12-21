@@ -353,12 +353,12 @@ nav {
     transition: 300ms;
   }
 
-  .works-section .card:hover {
-    transform: scale(1.05);
-  }
-
   .card:nth-child(2n) {
     flex-direction: row-reverse;
+  }
+
+  .works-section .card:hover {
+    transform: scale(1.05);
   }
 }
 
