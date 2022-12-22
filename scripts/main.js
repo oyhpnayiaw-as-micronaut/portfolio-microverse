@@ -101,3 +101,35 @@ getForm.addEventListener('submit', (e) => {
   e.preventDefault();
   checkLowerCase(getEmail);
 });
+
+// end validation
+
+// Start Local Storage
+
+const inputDatas = JSON.parse(localStorage.getItem('inputDatas')) || [];
+
+function addData(name, email, text) {
+  inputDatas.push({ name, email, text });
+  localStorage.setItem('inputDatas', JSON.stringify(inputDatas));
+  return { name, email, text };
+}
+
+function showData({ name, email, text }) {
+  getName.value = name;
+  getEmail.value = email;
+  getText.value = text;
+}
+
+inputDatas.forEach(showData);
+
+// End Local Storage
+
+getForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  checkLowerCase(getEmail);
+});
+
+getForm.addEventListener('change', (e) => {
+  e.preventDefault();
+  addData(getName.value, getEmail.value, getText.value);
+});
