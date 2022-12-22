@@ -90,7 +90,9 @@ function showSuccess(msg) {
 
 function checkLowerCase(input) {
   if (input.value !== input.value.toLowerCase()) {
-    showError(`${input.type.toUpperCase()} should be in lowercase. Please resubmit again.`);
+    showError(
+      `${input.type.toUpperCase()} should be in lowercase. Please resubmit again.`,
+    );
   } else {
     showSuccess("Thank You. We'll consider it.");
     getForm.submit();
