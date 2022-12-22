@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-@import url('./popup.css');
+@import url('./modal.css');
 
 * {
   box-sizing: border-box;
@@ -80,6 +80,7 @@ main {
 
 .close-icon {
   mask: url(../assets/icons/close.svg) no-repeat center;
+  -webkit-mask: url(../assets/icons/close.svg) no-repeat center;
   width: 16px;
   height: 16px;
   background: #fff;
