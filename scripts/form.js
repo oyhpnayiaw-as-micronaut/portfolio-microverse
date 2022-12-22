@@ -21,3 +21,26 @@ formEl.addEventListener('submit', (e) => {
 
   e.target.submit();
 });
+// end validation
+
+// populate form with data from local storage
+const formData = JSON.parse(localStorage.getItem('formData')) || {};
+
+Object.entries(formData).forEach(([key, value]) => {
+  formEl.elements[key].value = value;
+});
+
+/// trigger when form is updated
+function change() {
+  const { elements } = this;
+
+  const data = JSON.stringify({
+    name: elements.name.value,
+    email: elements.email.value,
+    message: elements.message.value,
+  });
+
+  localStorage.setItem('formData', data);
+}
+
+formEl.addEventListener('change', change);
