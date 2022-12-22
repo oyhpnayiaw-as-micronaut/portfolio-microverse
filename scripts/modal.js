@@ -28,14 +28,16 @@ function generatePopupWindowTemplate(project) {
           <hr />
           <div class="popup-button-container">
             <a href="${project.live}" class="primary-button card-button">
-              See Live<span class="popup-a-icon export-icon"/>
+              <span>See Live</span>
+              <span class="popup-a-icon export-icon"/>
             </a>
             <a 
               href="${project.source}" 
               class="primary-button card-button" 
               target="_blank" 
               rel="noopener noreferrer">
-                See Source<span class="popup-a-icon github-icon"/>
+               <span>See Source</span>
+               <span class="popup-a-icon github-icon"/>
             </a>
           </div>
         </div>

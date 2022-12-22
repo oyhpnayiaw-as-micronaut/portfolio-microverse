@@ -103,14 +103,16 @@
 
 .popup-button-container a {
   flex: 1;
-  display: inline-flex;
+  display: flex;
   gap: 6px;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
 }
 
 .popup-a-icon {
   height: 18px;
   width: 18px;
-  margin: auto;
   background-color: #6070ff;
   transition: 350ms;
 }
