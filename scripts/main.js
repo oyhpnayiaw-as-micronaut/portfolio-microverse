@@ -69,3 +69,5 @@ const seeProjectBtn = document.querySelectorAll('.card-button');
 seeProjectBtn.forEach((btn, index) => {
   btn.addEventListener('click', () => openPopup(index));
 });
+
+// client validation setup
