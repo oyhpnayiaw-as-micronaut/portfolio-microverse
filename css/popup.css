@@ -108,8 +108,8 @@
 }
 
 .popup-a-icon {
-  height: 16px;
-  width: 16px;
+  height: 18px;
+  width: 18px;
   margin: auto;
   background-color: #6070ff;
   transition: 350ms;
@@ -117,10 +117,12 @@
 
 .export-icon {
   mask: url(../assets/icons/export.svg) no-repeat center;
+  -webkit-mask: url(../assets/icons/export.svg) no-repeat center;
 }
 
 .github-icon {
   mask: url(../assets/icons/github.svg) no-repeat center;
+  -webkit-mask: url(../assets/icons/github.svg) no-repeat center;
 }
 
 #popup .primary-button:hover .popup-a-icon {

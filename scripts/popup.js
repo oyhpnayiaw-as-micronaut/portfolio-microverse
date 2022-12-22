@@ -1,4 +1,6 @@
-function generatePopupTemplate(project) {
+import { enableScroll, disableScroll } from './main.js';
+
+function generatePopupWindowTemplate(project) {
   return `
     <article class="card">
       <div class="flex">
@@ -83,4 +85,31 @@ const projects = [
   },
 ];
 
-export { generatePopupTemplate, projects };
+// Handle Popup Window
+const popupEl = document.getElementById('popup');
+
+function closePopup() {
+  enableScroll();
+  popupEl.classList.remove('show');
+  popupEl.innerHTML = '';
+}
+
+function openPopup(index) {
+  disableScroll();
+  popupEl.classList.add('show');
+  popupEl.innerHTML = generatePopupWindowTemplate(projects[index]);
+
+  const popupBtns = document.querySelectorAll(
+    '.popup-close-button, .popup-button-container > a',
+  );
+
+  popupBtns.forEach((btn) => {
+    btn.addEventListener('click', closePopup);
+  });
+}
+
+const seeProjectBtn = document.querySelectorAll('.card-button');
+
+seeProjectBtn.forEach((btn, index) => {
+  btn.addEventListener('click', () => openPopup(index));
+});
