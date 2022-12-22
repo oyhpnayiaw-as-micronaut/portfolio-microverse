@@ -80,6 +80,7 @@ main {
 
 .close-icon {
   mask: url(../assets/icons/close.svg) no-repeat center;
+  -webkit-mask: url(../assets/icons/close.svg) no-repeat center;
   width: 16px;
   height: 16px;
   background: #fff;

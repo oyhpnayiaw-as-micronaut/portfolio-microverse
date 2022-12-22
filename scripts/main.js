@@ -38,9 +38,6 @@ navLinks.forEach((link) => {
   link.addEventListener('click', closeMenu);
 });
 
-//
-//
-//
 // Handle Popup
 const popup = document.getElementById('popup');
 
