@@ -10,6 +10,7 @@
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
@@ -28,6 +29,16 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 > This project is built-with **html** and **css**.
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+- **Responsive and Interactive designs**
+- **Amazing Animations**
+- **Send email directly via `formspree` service**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
@@ -86,6 +97,7 @@ npm run hint
 
 - [ ] **Popup Details**
 - [ ] **Client Side Validations**
+- [ ] **Local Storage**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
