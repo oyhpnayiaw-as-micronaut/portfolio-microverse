@@ -1,4 +1,5 @@
 import { enableScroll, disableScroll } from './main.js';
+import projects from './portfolio.js';
 
 function generatePopupWindowTemplate(project) {
   return `
@@ -45,47 +46,6 @@ function generatePopupWindowTemplate(project) {
     </article>
 `;
 }
-
-// prettier-ignore
-const description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent";
-
-// prettier-ignore
-const source = 'https://github.com/oyhpnayiaw-as-micronaut/portfolio-microverse';
-
-const projects = [
-  {
-    title: 'Tonic',
-    image: 'assets/images/portfolio-1.svg',
-    description,
-    technologies: ['html', 'css', 'javaScript'],
-    live: '#',
-    source,
-  },
-  {
-    title: 'Multi-Post Stories',
-    image: 'assets/images/portfolio-2.svg',
-    description,
-    technologies: ['html', 'css', 'javaScript', 'github', 'ruby', 'bootstraps'],
-    live: '#',
-    source,
-  },
-  {
-    title: 'Tonic',
-    image: 'assets/images/portfolio-3.svg',
-    description,
-    technologies: ['html', 'css', 'javaScript', 'github', 'ruby', 'bootstraps'],
-    live: '#',
-    source,
-  },
-  {
-    title: 'Multi-Post Stories',
-    image: 'assets/images/portfolio-4.svg',
-    description,
-    technologies: ['html', 'css', 'javaScript'],
-    live: '#',
-    source,
-  },
-];
 
 // Handle Popup Window
 const popupEl = document.getElementById('popup');
