@@ -41,7 +41,6 @@ const projects = [
 
 function generateProjectTemplate(project) {
   return `
-      <article class="card">
         <div class="card-image">
           <img src="${project.image}" alt="Portfolio" />
         </div>
@@ -64,14 +63,14 @@ function generateProjectTemplate(project) {
             See Project
           </button>
         </div>
-      </article>
       `;
 }
 
 const portfolioEl = document.getElementById('portfolio');
 
 projects.forEach((project) => {
-  const projectEl = document.createElement('div');
+  const projectEl = document.createElement('article');
+  projectEl.classList.add('card');
   projectEl.innerHTML = generateProjectTemplate(project);
   portfolioEl.appendChild(projectEl);
 });
